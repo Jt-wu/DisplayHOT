@@ -10,17 +10,16 @@
 
 `itemType` 必须七选一：
 
-- `model_release`：新模型或大版本更新
-- `product_launch`：新产品、工具或重大功能更新
-- `tool_or_prompt`：可直接复用的方法、Prompt、Skill 或技巧
+- `technology_release`：新显示技术、材料、工艺或关键技术升级
+- `product_launch`：显示终端或组件产品发布与重大更新
+- `market_report`：市场价格、出货、份额、供需与稼动率报告
 - `research_paper`：论文、研究或技术报告
 - `industry_event`：融资、收购、监管、诉讼、商业动作或人事
 - `opinion_analysis`：观点、行业判断、复盘或长访谈
 - `tutorial_explainer`：教程、科普、解读或评测
 
-优先级：发了模型选 model_release；发了工具选 product_launch；发了 Prompt 或方法选 tool_or_prompt；论文优先 research_paper；评测选 tutorial_explainer。
-
-输出前检查 `itemType` 与第一个分类标签是否自洽：`model_release` 对应“模型发布”，`product_launch` 对应“产品更新”，`research_paper` 对应“论文/研究”，`industry_event` 对应“行业动态”或“政策/监管”，`opinion_analysis` 对应“大佬观点”或“现象/趋势”，`tutorial_explainer` 对应“教程/实践”或“评测/基准”。如果二者冲突，按当前材料的核心事件修正后再输出。
+优先级：价格、出货、供需等市场数据选 market_report；技术工艺发布选 technology_release；终端产品发布选 product_launch；学术论文选 research_paper；产能、投资与并购选 industry_event；观点分析选 opinion_analysis；实测与解读选 tutorial_explainer。
+第一个分类标签与内容类型一致：technology_release 对应技术进展；product_launch 对应产品发布；market_report 对应市场数据或价格走势；research_paper 对应论文/研究；industry_event 对应产能投资、行业动态或政策/监管；opinion_analysis 对应行业观点或现象/趋势；tutorial_explainer 对应教程/实践或评测/基准。
 
 ## 作者角色
 
@@ -32,14 +31,8 @@
 
 ## 标签
 
-`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：模型发布、产品更新、开源/仓库、论文/研究、教程/实践、大佬观点、评测/基准、安全/对齐、现象/趋势、行业动态、政策/监管、非AI/通用工具、其他。
-
-其后可选 0–5 个适用标签，并且只能来自以下两个白名单：
-
-- 主题：Agent、编码、推理、多模态、语音、视频、图像生成、RAG、端侧、数据/训练、搜索、部署/工程、开源生态、具身智能、MCP/工具调用
-- 实体：OpenAI、Anthropic、DeepSeek、DeepMind、Google、Meta、Microsoft、xAI、Hugging Face、GitHub、arXiv
-
-正文中即使明确出现了 NVIDIA、Apple、阿里等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如学校限制 AI 使用的监管新闻，不需要强行归到“编码”或“推理”。
+`tags` 输出 1–6 个字符串，第一个只能从分类标签选择：市场数据、价格走势、技术进展、产品发布、产能投资、行业动态、论文/研究、评测/基准、教程/实践、现象/趋势、行业观点、政策/监管、其他。
+其后只能来自主题词表 LCD、OLED、AMOLED、Mini LED、Micro LED、电子纸、量子点、背光、驱动IC、显示材料、显示设备、产能、稼动率、出货量、面板价格、电视、显示器、笔记本、手机、车载显示、商用显示、AR/VR 或实体词表 京东方、TCL华星、惠科、友达光电、群创光电、三星显示、LG显示、天马、维信诺、TrendForce、奥维云网、奥维睿沃、Omdia、DSCC、Counterpoint、UBI Research。只打原文实际涉及的标签；没有适用项时只返回分类标签，不创造词表外标签。
 
 ## 候选阅读价值
 
@@ -51,12 +44,12 @@
 
 ## 中文标题和摘要
 
-`titleZh` 必须是自洽的中文标题，包含事件主体以及动作或结果。保留必要的模型名、产品名、版本号、机构名和关键数字，不写“最新动态”“引发关注”等空话。原标题已经是中文时也要保证脱离来源名后仍能独立理解。
+`titleZh` 必须是自洽的中文标题，包含事件主体以及动作或结果。保留必要的技术名、产品名、版本号、机构名和关键数字，不写“最新动态”“引发关注”等空话。原标题已经是中文时也要保证脱离来源名后仍能独立理解。
 
-`summaryZh` 必须忠实使用当前材料。短 X 推文完整翻译作者自己的主推文；长推文或文章先写核心事实，再写一层关键细节或影响。保留关键数字、版本、机构、模型和 URL；引用内容只作上下文，不冒充主推作者自己的话。
+`summaryZh` 必须忠实使用当前材料。短 X 推文完整翻译作者自己的主推文；长推文或文章先写核心事实，再写一层关键细节或影响。保留关键数字、版本、机构、技术和 URL；引用内容只作上下文，不冒充主推作者自己的话。
 
 图片只能补充清晰可见、与正文直接相关的事实。忽略头像、品牌图、装饰图、模糊内容和与正文重复的信息。不得仅凭图片猜测人物身份、地点、时间、因果、性能或产品能力；图文冲突时不得擅自裁决。
 
 只返回合法 JSON，不要 Markdown，不要解释。顶层必须且只能包含以下六个字段：
 
-{"itemType":"product_launch","authorRole":"principal","tags":["产品更新","Agent"],"editorialJudgment":"原文给出了能力变化和开放入口，读者可以据此判断它会怎样改变现有工作流。","titleZh":"某产品发布智能体功能","summaryZh":"某产品发布新的智能体功能，给出了开放入口和主要能力变化。"}
+{"itemType":"product_launch","authorRole":"principal","tags":["产品发布","OLED"],"editorialJudgment":"原文给出了显示规格与上市计划，读者可以据此比较产品定位。","titleZh":"某厂商发布OLED显示器","summaryZh":"某厂商发布OLED显示器，公布了尺寸、刷新率与上市时间。"}
