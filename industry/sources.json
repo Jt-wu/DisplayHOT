@@ -143,6 +143,657 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "mp-user-list-01",
+      "name": "视听圈",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "视听圈"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-02",
+      "name": "中国机器人图鉴",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "中国机器人图鉴"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-03",
+      "name": "高工人形机器人",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "高工人形机器人"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-04",
+      "name": "芯榜",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "芯榜"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-05",
+      "name": "机器人大讲堂",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "机器人大讲堂"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-06",
+      "name": "今日芯闻",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "今日芯闻"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-07",
+      "name": "国际全触与显示展…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "国际全触与显示展"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-08",
+      "name": "SemiDisplay View…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "SemiDisplay View"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-09",
+      "name": "DIC显视界",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "DIC显视界"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-10",
+      "name": "DISCIEN迪显…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "DISCIEN迪显"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-11",
+      "name": "芯八哥",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "芯八哥"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-12",
+      "name": "Runto洛图科技观…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "Runto洛图科技观"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-13",
+      "name": "显示世界",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "显示世界"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-14",
+      "name": "Wit Display",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "Wit Display"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-15",
+      "name": "液晶网",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "液晶网"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-16",
+      "name": "ePaper Insight",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "ePaper Insight"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-17",
+      "name": "行家说Display",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "行家说Display"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-18",
+      "name": "TrendForce集邦…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "TrendForce集邦"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-19",
+      "name": "集邦Display",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "集邦Display"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-20",
+      "name": "显示资讯 Display…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "显示资讯 Display"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-21",
+      "name": "产业洞察－分析评…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "产业洞察－分析评"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-22",
+      "name": "新型显示",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "新型显示"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-23",
+      "name": "显示汇",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "显示汇"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-24",
+      "name": "Wit OLED",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "Wit OLED"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-25",
+      "name": "ChannelGate视博…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "ChannelGate视博"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-26",
+      "name": "机器人规划与控制研…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "机器人规划与控制研"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-27",
+      "name": "MicroLEDDisplay…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "MicroLEDDisplay"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-28",
+      "name": "MLEDisplay",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "MLEDisplay"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-29",
+      "name": "光学显示观察",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "光学显示观察"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-30",
+      "name": "学不会吃亏的经济学原理",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "学不会吃亏的经济学原理"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-31",
+      "name": "华为相关",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "华为相关"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "mp-user-list-32",
+      "name": "MIT Technology Review…",
+      "kind": "mp_account",
+      "config": {
+        "nickname": "MIT Technology Review"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "微信公众号",
+        "用户指定清单",
+        "待配置",
+        "名称待核对"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
     }
   ]
 }
