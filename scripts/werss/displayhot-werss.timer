@@ -1,0 +1,11 @@
+[Unit]
+Description=Collect DisplayHOT WeChat sources twice daily
+
+[Timer]
+OnCalendar=*-*-* 07:00:00 Asia/Taipei
+OnCalendar=*-*-* 19:00:00 Asia/Taipei
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
