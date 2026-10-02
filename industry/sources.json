@@ -147,10 +147,8 @@
     {
       "id": "mp-user-list-01",
       "name": "视听圈",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "视听圈"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -158,12 +156,11 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-02",
@@ -188,10 +185,8 @@
     {
       "id": "mp-user-list-03",
       "name": "高工人形机器人",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "高工人形机器人"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -199,20 +194,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-04",
       "name": "芯榜",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "芯榜"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -220,20 +212,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-05",
       "name": "机器人大讲堂",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "机器人大讲堂"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -241,12 +230,11 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-06",
@@ -272,10 +260,8 @@
     {
       "id": "mp-user-list-07",
       "name": "国际全触与显示展",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "国际全触与显示展"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -283,20 +269,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-08",
       "name": "SemiDisplay View",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "SemiDisplay View"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -304,20 +287,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-09",
       "name": "DIC显视界",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "DIC显视界"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -325,12 +305,11 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-10",
@@ -377,10 +356,8 @@
     {
       "id": "mp-user-list-12",
       "name": "Runto洛图科技观研",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "Runto洛图科技观研"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -388,20 +365,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-13",
       "name": "显示世界",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "显示世界"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -409,20 +383,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-14",
       "name": "Wit Display",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "Wit Display"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -430,20 +401,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-15",
       "name": "液晶网",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "液晶网"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -451,20 +419,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-16",
       "name": "ePaper Insight",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "ePaper Insight"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -472,20 +437,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-17",
       "name": "行家说Display",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "行家说Display"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -493,20 +455,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-18",
       "name": "TrendForce集邦咨询",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "TrendForce集邦咨询"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -514,20 +473,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-19",
       "name": "集邦Display",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "集邦Display"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -535,20 +491,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-20",
       "name": "显示资讯 Display Times",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "显示资讯 Display Times"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -556,12 +509,11 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-21",
@@ -587,10 +539,8 @@
     {
       "id": "mp-user-list-22",
       "name": "新型显示",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "新型显示"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -598,20 +548,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-23",
       "name": "显示汇",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "显示汇"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -619,20 +566,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-24",
       "name": "Wit OLED",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "Wit OLED"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -640,20 +584,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-25",
       "name": "ChannelGate视博合聚",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "ChannelGate视博合聚"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -661,20 +602,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-26",
       "name": "机器人规划与控制研究所",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "机器人规划与控制研究所"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -682,20 +620,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-27",
       "name": "MicroLEDDisplay",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "MicroLEDDisplay"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -703,20 +638,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-28",
       "name": "MLEDisplay",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "MLEDisplay"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -724,20 +656,17 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-29",
       "name": "光学显示观察",
-      "kind": "mp_account",
-      "config": {
-        "nickname": "光学显示观察"
-      },
+      "kind": "external",
+      "config": {},
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
@@ -745,12 +674,11 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "身份已核对",
-        "待接入WeRSS"
+        "WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mp-user-list-30",
