@@ -158,7 +158,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -198,7 +199,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -218,7 +220,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -238,7 +241,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -258,7 +262,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -266,7 +271,7 @@
     },
     {
       "id": "mp-user-list-07",
-      "name": "国际全触与显示展…",
+      "name": "国际全触与显示展",
       "kind": "mp_account",
       "config": {
         "nickname": "国际全触与显示展"
@@ -278,8 +283,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -287,7 +292,7 @@
     },
     {
       "id": "mp-user-list-08",
-      "name": "SemiDisplay View…",
+      "name": "SemiDisplay View",
       "kind": "mp_account",
       "config": {
         "nickname": "SemiDisplay View"
@@ -299,8 +304,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -320,7 +325,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -328,7 +334,7 @@
     },
     {
       "id": "mp-user-list-10",
-      "name": "DISCIEN迪显…",
+      "name": "DISCIEN迪显",
       "kind": "mp_account",
       "config": {
         "nickname": "DISCIEN迪显"
@@ -340,8 +346,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -361,7 +367,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -369,10 +376,10 @@
     },
     {
       "id": "mp-user-list-12",
-      "name": "Runto洛图科技观…",
+      "name": "Runto洛图科技观研",
       "kind": "mp_account",
       "config": {
-        "nickname": "Runto洛图科技观"
+        "nickname": "Runto洛图科技观研"
       },
       "tier": "T2",
       "first_party": false,
@@ -381,8 +388,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -402,7 +409,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -422,7 +430,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -442,7 +451,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -462,7 +472,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -482,7 +493,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -490,10 +502,10 @@
     },
     {
       "id": "mp-user-list-18",
-      "name": "TrendForce集邦…",
+      "name": "TrendForce集邦咨询",
       "kind": "mp_account",
       "config": {
-        "nickname": "TrendForce集邦"
+        "nickname": "TrendForce集邦咨询"
       },
       "tier": "T2",
       "first_party": false,
@@ -502,8 +514,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -523,7 +535,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -531,10 +544,10 @@
     },
     {
       "id": "mp-user-list-20",
-      "name": "显示资讯 Display…",
+      "name": "显示资讯 Display Times",
       "kind": "mp_account",
       "config": {
-        "nickname": "显示资讯 Display"
+        "nickname": "显示资讯 Display Times"
       },
       "tier": "T2",
       "first_party": false,
@@ -543,8 +556,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -585,7 +598,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -605,7 +619,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -625,7 +640,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -633,10 +649,10 @@
     },
     {
       "id": "mp-user-list-25",
-      "name": "ChannelGate视博…",
+      "name": "ChannelGate视博合聚",
       "kind": "mp_account",
       "config": {
-        "nickname": "ChannelGate视博"
+        "nickname": "ChannelGate视博合聚"
       },
       "tier": "T2",
       "first_party": false,
@@ -645,8 +661,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -654,10 +670,10 @@
     },
     {
       "id": "mp-user-list-26",
-      "name": "机器人规划与控制研…",
+      "name": "机器人规划与控制研究所",
       "kind": "mp_account",
       "config": {
-        "nickname": "机器人规划与控制研"
+        "nickname": "机器人规划与控制研究所"
       },
       "tier": "T2",
       "first_party": false,
@@ -666,8 +682,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -675,7 +691,7 @@
     },
     {
       "id": "mp-user-list-27",
-      "name": "MicroLEDDisplay…",
+      "name": "MicroLEDDisplay",
       "kind": "mp_account",
       "config": {
         "nickname": "MicroLEDDisplay"
@@ -687,8 +703,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置",
-        "名称待核对"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -708,7 +724,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -728,7 +745,8 @@
       "tags": [
         "微信公众号",
         "用户指定清单",
-        "待配置"
+        "身份已核对",
+        "待接入WeRSS"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
