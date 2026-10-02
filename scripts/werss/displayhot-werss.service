@@ -1,0 +1,9 @@
+[Unit]
+Description=DisplayHOT WeRead source snapshot and import
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/displayhot-werss/run.sh
+TimeoutStartSec=3600
