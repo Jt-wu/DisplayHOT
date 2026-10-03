@@ -1,0 +1,34 @@
+import './setup.ts';
+import assert from 'node:assert/strict';
+import { after, test } from 'node:test';
+import Fastify from 'fastify';
+import { sql, closeDb } from '@aihot/backend/db';
+import { config } from '@aihot/backend/config';
+import { passwordLogin, SESSION_COOKIE } from '@aihot/backend/admin/auth';
+import { trafficPath, visitorKey, recordTraffic } from '@aihot/backend/admin/traffic';
+import { registerTraffic } from '../apps/api/src/routes/traffic.ts';
+const app = Fastify();
+registerTraffic(app);
+after(async () => { await app.close(); await closeDb(); });
+test('traffic strips query secrets, rejects private pages, and rotates visitor identifiers daily', () => {
+  assert.equal(trafficPath('/all?token=secret'), '/all');
+  assert.equal(trafficPath('/admin/traffic'), null);
+  assert.equal(trafficPath('/api/auth/password'), null);
+  assert.equal(trafficPath('//external.example'), null);
+  assert.notEqual(visitorKey('192.0.2.1','Browser',new Date('2026-10-02T03:00Z')),visitorKey('192.0.2.1','Browser',new Date('2026-10-03T03:00Z')));
+});
+test('statistics require an admin session and reject foreign pageview submissions', async () => {
+  const denied = await app.inject('/api/admin/traffic');
+  assert.equal(denied.statusCode,401);
+  assert.equal(denied.headers['cache-control'],'no-store');
+  const foreign = await app.inject({method:'POST',url:'/api/site/traffic',headers:{origin:'https://foreign.example'},payload:{path:'/all'}});
+  assert.equal(foreign.statusCode,403);
+  config.adminPassword='test-admin-password-traffic';
+  const session=await passwordLogin(config.adminPassword,'/admin/traffic','test');
+  await recordTraffic({kind:'page',path:'/traffic-test',visitor:'test-only',device:'电脑'});
+  const allowed=await app.inject({url:'/api/admin/traffic?days=7',headers:{cookie:`${SESSION_COOKIE}=${session.token}`}});
+  assert.equal(allowed.statusCode,200);
+  assert.equal(allowed.headers['cache-control'],'no-store');
+  assert.ok(allowed.json().pages.some((row:{label:string})=>row.label==='/traffic-test'));
+  await sql`DELETE FROM traffic_events WHERE path='/traffic-test'`;
+});
