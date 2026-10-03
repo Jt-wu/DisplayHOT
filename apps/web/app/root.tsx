@@ -4,7 +4,7 @@ import {
   isRouteErrorResponse, Link, Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation, useNavigation, useRouteError, useRouteLoaderData,
   type ShouldRevalidateFunction,
 } from "react-router";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Sidebar } from "./components/shell/Sidebar";
@@ -91,6 +91,11 @@ export default function App() {
   const meta = useLoaderData<typeof loader>();
   useHydratedFlag();
   const { pathname } = useLocation();
+  useEffect(() => {
+    if (/^\/admin(?:\/|$)/.test(pathname)) return;
+    void fetch("/api/site/traffic", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ path: pathname, referrer: document.referrer }), keepalive: true }).catch(() => {});
+  }, [pathname]);
   // The admin has its own chrome.
   if (pathname === "/admin" || pathname.startsWith("/admin/")) return <Outlet />;
   return (
