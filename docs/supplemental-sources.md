@@ -5,8 +5,8 @@
 | ID | 渠道 | 公开验证与限制 | 周期 |
 | --- | --- | --- | --- |
 | web-counterpoint-display | Counterpoint / DSCC | Insights 列表按显示关键词过滤；正文页面未提供可提取的公开全文，仅采公开简介，正文不标记完整。日期取 article:published_time。显示专题页返回 403，不使用旧 DSCC 跳转入口。 | 6 小时 |
-| web-omdia-display | Omdia | /pr 公开新闻稿，按显示关键词过滤；样本 OLED 显示器新闻正文可提取。不采订阅报告。 | 6 小时 |
-| rss-display-daily | Display Daily | 官方 RSS 可读，但最新条目为 2026-04-01，标注低频参考，不将旧文视为当前新闻。 | 24 小时 |
+| web-omdia-display | Omdia | 生产服务器 /pr 返回 Cloudflare 403，改用官网明确发布的 /rss/press-feed.aspx；RSS 正常，按显示关键词过滤，只采公开摘要，不将摘要当全文。 | 6 小时 |
+| rss-display-daily | Display Daily | 本地 RSS 可读，最新条目为 2026-04-01；生产服务器返回 Cloudflare 403，保留目录但暂停自动采集，等待官方可用入口。 | 24 小时 |
 | rss-microled-info | MicroLED-Info | 官方 RSS，日期与摘要可读；页面正文仍由正常正文任务提取。 | 6 小时 |
 | web-samsung-display | Samsung Display | 仅新闻稿分类 67；使用官网 JavaScript 中公开的请求标记读取公开列表，无登录凭据。视频条目跳过，日期未公开则留空。 | 6 小时 |
 | web-tcl-csot | TCL 华星 | 英文官方列表及正文可读，标题从详情补全；列表最新条目为 2026-02-03，中文首页访问超时，暂标低频参考。 | 24 小时 |

@@ -796,17 +796,9 @@
     {
       "id": "web-omdia-display",
       "name": "Omdia · 显示公开新闻稿",
-      "kind": "web_list",
+      "kind": "rss",
       "config": {
-        "url": "https://omdia.tech.informa.com/pr",
-        "itemSelector": ".tile-list-content",
-        "linkSelector": "h3 a",
-        "titleSelector": "h3",
-        "publishedAtSelector": ".tile-list-metas span",
-        "publishedAtUtcOffset": "+00:00",
-        "allowUrlPrefixes": [
-          "https://omdia.tech.informa.com/pr/20"
-        ],
+        "feedUrl": "https://omdia.tech.informa.com/rss/press-feed.aspx",
         "ingestNoiseFilter": {
           "dropMarkers": [
             ""
@@ -821,10 +813,6 @@
             "quantum dot"
           ]
         },
-        "detail": {
-          "maxFetches": 4,
-          "summarySelector": "meta[name=\"description\"]"
-        },
         "_aihot": {
           "initialBackfillLimit": 4,
           "initialBackfillMonths": 12
@@ -838,7 +826,8 @@
       "tags": [
         "显示行业",
         "补充信源",
-        "研究机构"
+        "研究机构",
+        "公开摘要"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
@@ -864,11 +853,12 @@
         "显示行业",
         "补充信源",
         "专业媒体",
-        "低频参考"
+        "低频参考",
+        "服务器访问受限"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false,
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "rss-microled-info",
