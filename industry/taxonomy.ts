@@ -22,7 +22,7 @@ export const CATEGORY_BY_ITEM_TYPE: Readonly<Record<string, string>> = {
 };
 export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[] }> = {
   "boe": { name: "京东方", displayTag: "京东方", aliases: ["BOE", "京东方"] },
-  "tcl-csot": { name: "TCL华星", displayTag: "TCL华星", aliases: ["TCL CSOT", "CSOT", "TCL华星", "华星光电"] },
+  "tcl-csot": { name: "TCL华星", displayTag: "TCL华星", aliases: ["TCL CSOT", "TCL China Star", "CSOT", "TCL华星", "华星光电"] },
   "hkc": { name: "惠科", displayTag: "惠科", aliases: ["HKC", "惠科"] },
   "auo": { name: "友达光电", displayTag: "友达光电", aliases: ["AUO", "AU Optronics", "友达光电", "友达"] },
   "innolux": { name: "群创光电", displayTag: "群创光电", aliases: ["Innolux", "群创光电", "群创"] },
@@ -40,7 +40,7 @@ export const ENTITIES: Record<string, { name: string; displayTag: string | null;
 };
 export const IDENTITY_LEXICON: ReadonlyArray<{ id: string; name: string; patterns: RegExp[] }> = [
   { id: "boe", name: "京东方", patterns: [/\bBOE\b|京东方/i] },
-  { id: "tcl-csot", name: "TCL华星", patterns: [/\bCSOT\b|TCL\s+CSOT|TCL华星|华星光电/i] },
+  { id: "tcl-csot", name: "TCL华星", patterns: [/\bCSOT\b|TCL\s+(?:CSOT|China\s+Star)|TCL华星|华星光电/i] },
   { id: "hkc", name: "惠科", patterns: [/\bHKC\b|惠科/i] },
   { id: "auo", name: "友达光电", patterns: [/\bAUO\b|AU\s+Optronics|友达/i] },
   { id: "innolux", name: "群创光电", patterns: [/Innolux|群创/i] },
