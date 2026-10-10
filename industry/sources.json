@@ -740,6 +740,268 @@
       "site_fulltext": false,
       "syndicate_fulltext": false,
       "enabled": false
+    },
+    {
+      "id": "web-counterpoint-display",
+      "name": "Counterpoint / DSCC · 显示公开资讯",
+      "kind": "web_list",
+      "config": {
+        "url": "https://counterpointresearch.com/en/insights",
+        "itemSelector": "a[href^=\"/en/insights/\"]:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtSelector": "p",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://counterpointresearch.com/en/insights/"
+        ],
+        "ingestNoiseFilter": {
+          "dropMarkers": [
+            ""
+          ],
+          "keepIfMatches": [
+            "display",
+            "panel",
+            "oled",
+            "mini-led",
+            "microled",
+            "micro-led",
+            "quantum dot"
+          ]
+        },
+        "detail": {
+          "maxFetches": 4,
+          "summarySelector": "meta[name=\"description\"]",
+          "publishedAtAuthoritative": true
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "counterpoint",
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "研究机构",
+        "公开摘要"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "web-omdia-display",
+      "name": "Omdia · 显示公开新闻稿",
+      "kind": "web_list",
+      "config": {
+        "url": "https://omdia.tech.informa.com/pr",
+        "itemSelector": ".tile-list-content",
+        "linkSelector": "h3 a",
+        "titleSelector": "h3",
+        "publishedAtSelector": ".tile-list-metas span",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://omdia.tech.informa.com/pr/20"
+        ],
+        "ingestNoiseFilter": {
+          "dropMarkers": [
+            ""
+          ],
+          "keepIfMatches": [
+            "display",
+            "panel",
+            "oled",
+            "mini-led",
+            "microled",
+            "micro-led",
+            "quantum dot"
+          ]
+        },
+        "detail": {
+          "maxFetches": 4,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "omdia",
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "研究机构"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "rss-display-daily",
+      "name": "Display Daily",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://displaydaily.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "专业媒体",
+        "低频参考"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "rss-microled-info",
+      "name": "MicroLED-Info",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.microled-info.com/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "专业媒体",
+        "MicroLED"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "web-samsung-display",
+      "name": "Samsung Display · 官方新闻稿",
+      "kind": "web_list",
+      "config": {
+        "url": "https://news.samsungdisplay.com/category/67",
+        "adapter": "samsung_news",
+        "detail": {
+          "maxFetches": 4,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "samsung-display",
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "企业发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "web-tcl-csot",
+      "name": "TCL 华星 · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "url": "https://en.tclcsot.com/News/",
+        "itemSelector": "a.a-details",
+        "titleSelector": "h2.title",
+        "publishedAtRegex": "\\|\\s*([A-Za-z]+,\\d{1,2},\\d{4})",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://en.tclcsot.com/News/"
+        ],
+        "detail": {
+          "maxFetches": 4,
+          "titleSelector": "h1",
+          "titleAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "tcl-csot",
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "企业发布",
+        "低频参考"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "web-eink",
+      "name": "E Ink · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.eink.com/news",
+        "itemSelector": "li.item:has(.tag:contains(\"Press Releases\"))",
+        "linkSelector": "a",
+        "titleSelector": ".content .main",
+        "publishedAtSelector": ".date",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://www.eink.com/news/detail/"
+        ],
+        "detail": {
+          "maxFetches": 4,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "显示行业",
+        "补充信源",
+        "企业发布",
+        "电子纸"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
     }
   ]
 }

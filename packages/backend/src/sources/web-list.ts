@@ -27,6 +27,9 @@ export function parseLooseDate(value: string | null | undefined, utcOffset = "+0
   if (!value) return null;
   const v = value.trim();
   if (!v) return null;
+  // E Ink prints its date as day, year, then an English month.
+  const eink = /^(\d{1,2})\s+(\d{4})\s*\.\s*([A-Za-z]{3,9})$/.exec(v.replace(/\s+/g, " "));
+  if (eink) return parseLooseDate(`${eink[3]} ${eink[1]}, ${eink[2]}`, utcOffset);
   if (EXPLICIT_ZONE.test(v) || /^\d{4}-\d{2}-\d{2}$/.test(v)) {
     const direct = Date.parse(v);
     if (Number.isFinite(direct) && /\d{4}/.test(v)) return new Date(direct);
@@ -303,6 +306,7 @@ async function fromMimoHome(html: string, base: string, source: SourceRow): Prom
 }
 
 export async function fetchWebList(source: SourceRow): Promise<Candidate[]> {
+  if (source.config.adapter === "samsung_news") return fetchSamsungNews(source);
   const { text, viaJina, base } = await fetchListingText(source);
   const mode = source.config.adapter === "mimo_home" ? "mimo_home" : source.config.parseMode ?? (viaJina ? "markdown" : "html");
   let out: Candidate[];
@@ -312,6 +316,32 @@ export async function fetchWebList(source: SourceRow): Promise<Candidate[]> {
   else out = fromHtml(text, base, source);
   if (out.length === 0) throw new FetchError(`no items matched (${mode})`);
   return out;
+}
+
+/** The public newsroom uses its published JavaScript request marker, not a login session. */
+async function fetchSamsungNews(source: SourceRow): Promise<Candidate[]> {
+  const base = String(source.config.url);
+  const script = await guardedFetch(new URL("/js/common.js", base).toString());
+  if (script.status !== 200) throw new FetchError(`Samsung newsroom script HTTP ${script.status}`, script.status);
+  const marker = /\bvar\s+auth_token\s*=\s*["']([^"']+)["']/.exec(script.text())?.[1];
+  if (!marker) throw new FetchError("Samsung newsroom request marker unavailable");
+  const res = await guardedFetch(new URL("/src/notice/notice_list.php", base).toString(), {
+    method: "POST", headers: { "content-type": "application/x-www-form-urlencoded", referer: base },
+    body: new URLSearchParams({ type: "list", page: "1", cate_1: "67", depth: "2", num_per_page: "12", auth_token: marker }).toString(),
+  });
+  if (res.status !== 200) throw new FetchError(`Samsung newsroom HTTP ${res.status}`, res.status);
+  let data;
+  try { data = JSON.parse(res.text()); } catch { throw new FetchError("Samsung newsroom response is not JSON"); }
+  if (data.result !== "true" || !Array.isArray(data.msg)) throw new FetchError("Samsung newsroom listing unavailable");
+  const items = samsungNewsItems(data.msg, base);
+  if (!items.length) throw new FetchError("Samsung newsroom has no article items");
+  return items;
+}
+
+export function samsungNewsItems(rows: Record<string, unknown>[], base: string): Candidate[] {
+  return rows.filter(row => row.post_type === "1" && /^\d+$/.test(String(row.num)) && typeof row.post_title === "string")
+    .map(row => ({ url: new URL(`/${row.num}`, base).toString(), title: collapseWhitespace(stripTags(String(row.post_title))),
+      publishedAt: row.date_view === "Y" ? parseLooseDate(String(row.post_date), "+09:00") : null }));
 }
 
 export interface DetailNeed {

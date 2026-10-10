@@ -2,9 +2,26 @@
 // the server runs in (Docker runs in UTC; run this file with TZ=UTC and TZ=Asia/Shanghai to see both).
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { parseLooseDate } from "@aihot/backend/sources/web-list";
+import { parseLooseDate, samsungNewsItems } from "@aihot/backend/sources/web-list";
 
 const iso = (v: string, offset?: string) => parseLooseDate(v, offset)?.toISOString() ?? null;
+
+test("E Ink dates preserve the day and source timezone", () => {
+  assert.equal(iso("10\n 2026 . Sep"), "2026-09-09T16:00:00.000Z");
+});
+
+test("Samsung newsroom excludes video links and unconfirmed dates", () => {
+  const items = samsungNewsItems([
+    { num: "34529", post_type: "1", post_title: "OLED &#39;2K&#39;", post_date: "2026-09-16 09:30:00", date_view: "Y" },
+    { num: "3", post_type: "2", post_title: "Video" },
+    { num: "4", post_type: "1", post_title: "OLED", post_date: "2026-09-16", date_view: "N" },
+  ], "https://news.samsungdisplay.com/category/67");
+  assert.equal(items.length, 2);
+  assert.equal(items[0]!.url, "https://news.samsungdisplay.com/34529");
+  assert.equal(items[0]!.title, "OLED '2K'");
+  assert.equal(items[0]!.publishedAt!.toISOString(), "2026-09-16T00:30:00.000Z");
+  assert.equal(items[1]!.publishedAt, null);
+});
 
 test("a date and time without a zone is in the source's offset, not the server's", () => {
   assert.equal(iso("2026-09-26 10:00"), "2026-09-26T02:00:00.000Z");
