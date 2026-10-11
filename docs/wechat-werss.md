@@ -22,4 +22,8 @@ sudo journalctl -u displayhot-werss.service --since today
 
 首次验证可用后手动使用 `python3 /opt/displayhot-werss/import-snapshots.py --activate`。定时运行没有此参数，管理员暂停的信源不会自动启用。失败记录 `data/snapshot-failures.json`，导入结果 `import-results.json`。
 
+采集错误会同步为后台 `fetch_runs` 失败记录，并更新启用信源的失败状态和最近检查时间；正文为空或不足 280 字的结果显示为跳过、状态降级，不更新最近成功时间。正文可用但 URL 已存在时，采集成功而新增数为零。全失败或空快照让 systemd 任务失败，导入结果每次清空重写，避免沿用旧成功记录。暂停信源不会因失败同步而重新启用。
+
+2026-10-11 排查确认：10 月 2 日后公众号没有成功导入，旧桥接脚本未报告全失败，后台健康状态过时。微信读书登录校验失败、正常续期未通过，需要重新扫码；采集恢复须以实际正文导入验证，不能仅凭扫码完成或最新标题可读认定成功。
+
 当前适配 WeRSS 镜像 `ghcr.io/rachelos/we-mp-rss:latest`，部署镜像 ID `af771f21b3f7958a5dea16911fba050a6d7b92eac2fb2499c467c1b11f07ef34`。升级需验证接口兼容性。会话失效时不反复请求或轮换账号规避限制。

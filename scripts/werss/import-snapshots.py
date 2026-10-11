@@ -6,7 +6,10 @@ import sys
 
 root = Path('/opt/displayhot-werss')
 rows = json.loads((root / 'data/snapshot.json').read_text())
+failures = json.loads((root / 'data/snapshot-failures.json').read_text())
+rows += [{**failure, 'items': []} for failure in failures]
 results = []
+(root / 'import-results.json').write_text('[]')
 for feed in rows:
     path = root / 'one-snapshot.json'
     path.write_text(json.dumps([feed], ensure_ascii=False))
@@ -16,9 +19,14 @@ for feed in rows:
     command = ['docker', 'exec', 'aihot-api-1', 'node', '/app/scripts/import-werss.ts', '/tmp/werss-snapshot.json']
     if '--activate' in sys.argv:
         command.append('--activate')
-    result = subprocess.run(command, capture_output=True, text=True, timeout=90)
-    results.append({'sourceId': feed['sourceId'], 'ok': result.returncode == 0})
-    print(feed['sourceId'], 'import OK' if result.returncode == 0 else 'import FAILED', result.stdout.strip(), flush=True)
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, timeout=90)
+        ok = result.returncode == 0
+        print(feed['sourceId'], 'import OK' if ok else 'import FAILED', result.stdout.strip(), flush=True)
+    except subprocess.TimeoutExpired:
+        ok = False
+        print(feed['sourceId'], 'import TIMEOUT', flush=True)
+    results.append({'sourceId': feed['sourceId'], 'ok': ok})
     (root / 'import-results.json').write_text(json.dumps(results))
-if any(not result['ok'] for result in results):
+if not rows or any(not result['ok'] for result in results):
     sys.exit(1)

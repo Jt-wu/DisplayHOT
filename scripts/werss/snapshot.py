@@ -39,7 +39,8 @@ for feed in registry:
         output.append({'sourceId': feed['sourceId'], 'items': [item]})
         print(feed['sourceId'], 'body OK', 'date verified' if date else 'date unknown; archive only', flush=True)
     except Exception as exc:
-        failures.append({'sourceId': feed['sourceId'], 'error': type(exc).__name__})
+        failures.append({'sourceId': feed['sourceId'], 'error': type(exc).__name__,
+                         'code': str(getattr(exc, 'code', ''))})
         print(feed['sourceId'], 'failed', type(exc).__name__, flush=True)
     path = Path('/app/data/snapshot.json')
     path.write_text(json.dumps(output, ensure_ascii=False))
