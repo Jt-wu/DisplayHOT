@@ -104,6 +104,13 @@ test("anchors into the listing page itself are navigation, not posts", () => {
   assert.deepEqual(out.map((c) => c.url), ["https://example.org/blog/mimo-v2-6-tool-call"]);
 });
 
+test("explicit query detail rules collect LG-style articles while excluding same-page navigation", () => {
+  const html = '<li><a href="/news?contentId=42">OLED panel launch</a></li><li><a href="/news?page=2">Next page</a></li><li><a href="/news#top">Top</a></li>';
+  const out = fromHtml(html, "https://example.org/news", source({ url: "https://example.org/news", itemSelector: "li", allowUrlPrefixes: ["https://example.org/news?contentId="] }));
+  assert.deepEqual(out.map(c => c.url), ["https://example.org/news?contentId=42"]);
+  assert.equal(fromHtml(html, "https://example.org/news", source({ url: "https://example.org/news" })).length, 0);
+});
+
 test("promotions a feed rotates inside its posts are left out of the body", () => {
   // Microsoft Research's feed puts a different podcast or product promotion into each post on every load.
   const promo = (label: string, name: string) =>

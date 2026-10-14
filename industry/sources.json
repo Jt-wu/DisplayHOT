@@ -992,6 +992,261 @@
       "site_fulltext": false,
       "syndicate_fulltext": false,
       "enabled": true
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true,
+      "id": "web-cinno-display",
+      "name": "CINNO Research · 光电显示公开研究",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.cinno.com.cn/industry/all/optoelectronic",
+        "itemSelector": ".news_list li",
+        "linkSelector": "a[href^=\"/industry/news/\"]",
+        "titleSelector": ".wx_num",
+        "publishedAtSelector": "h2",
+        "publishedAtUtcOffset": "+08:00",
+        "detail": {
+          "maxFetches": 4
+        }
+      },
+      "tags": [
+        "研究机构",
+        "面板价格",
+        "产业投资"
+      ]
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true,
+      "id": "rss-ubi-display",
+      "name": "UBIResearchNet · 显示公开资讯",
+      "kind": "rss",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "feedUrl": "https://en.ubiresearchnet.com/feed/",
+        "denyCategories": [
+          "Video",
+          "Focus Pro"
+        ],
+        "sortByPublishedAt": true
+      },
+      "tags": [
+        "研究机构",
+        "OLED",
+        "韩国供应链"
+      ],
+      "owner_entity_id": "ubiresearch"
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false,
+      "id": "web-thelec-display",
+      "name": "The Elec · 显示面板专栏",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.thelec.net/news/articleList.html?sc_section_code=S1N3&view_type=sm",
+        "itemSelector": "a[href*=\"articleView.html\"]"
+      },
+      "tags": [
+        "专业媒体",
+        "韩国供应链",
+        "转载范围待确认"
+      ]
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true,
+      "id": "web-auo-display",
+      "name": "友达光电 · 官方新闻与经营数据",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.auo.com/en-global/New_Archive/index",
+        "itemSelector": "li.news",
+        "titleSelector": ".news-title",
+        "publishedAtSelector": ".date",
+        "publishedAtUtcOffset": "+08:00",
+        "denyUrlPrefixes": [
+          "https://www.auo.com/en-global/New_Archive/detail/News_Archive_ESG",
+          "https://www.auo.com/en-global/New_Archive/detail/News_Archive_Awards"
+        ],
+        "detail": {
+          "maxFetches": 4
+        },
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "appointment",
+            "organizational realignment"
+          ]
+        }
+      },
+      "tags": [
+        "企业发布",
+        "经营数据",
+        "MicroLED"
+      ],
+      "owner_entity_id": "auo"
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true,
+      "id": "web-udc-display",
+      "name": "UDC · 官方OLED材料与经营资讯",
+      "kind": "web_list",
+      "config": {
+        "url": "https://oled.com/blog/",
+        "itemSelector": "h3:has(a[href^=\"https://oled.com/blog/\"])",
+        "allowUrlPrefixes": [
+          "https://oled.com/blog/"
+        ],
+        "detail": {
+          "maxFetches": 4,
+          "publishedAtAuthoritative": true
+        },
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "conference call",
+            "participation at upcoming",
+            "receives prestigious",
+            "award"
+          ]
+        }
+      },
+      "tags": [
+        "企业发布",
+        "OLED材料",
+        "经营数据"
+      ]
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true,
+      "id": "web-lg-display",
+      "name": "LG Display · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.lgdisplay.com/eng/company/media-center/latest-news",
+        "itemSelector": ".board_col_list > li",
+        "linkSelector": "a.link",
+        "titleSelector": ".tit",
+        "publishedAtSelector": ".date",
+        "publishedAtUtcOffset": "+09:00",
+        "detail": {
+          "maxFetches": 4
+        },
+        "allowUrlPrefixes": [
+          "https://www.lgdisplay.com/eng/company/media-center/latest-news?contentId="
+        ]
+      },
+      "tags": [
+        "企业发布",
+        "OLED",
+        "车载显示"
+      ],
+      "owner_entity_id": "lg-display"
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false,
+      "id": "web-sid-display",
+      "name": "SID / Display Week · 技术研究目录",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.displayweek.org/news/",
+        "itemSelector": "li:has(a[href*=\"doi.org\"]), li:has(a[href*=\"sid.onlinelibrary.wiley.com/doi/\"])"
+      },
+      "tags": [
+        "学术学会",
+        "技术研究",
+        "PDF及论文正文待适配"
+      ]
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false,
+      "id": "web-sigmaintell-display",
+      "name": "群智咨询 · 显示公开研究",
+      "kind": "web_list",
+      "config": {
+        "_aihot": {
+          "initialBackfillLimit": 4,
+          "initialBackfillMonths": 12
+        },
+        "url": "https://www.sigmaintell.com/news.php?cid=42",
+        "itemSelector": "a[href*=\"newsinfo\"]"
+      },
+      "tags": [
+        "研究机构",
+        "面板价格",
+        "服务器连接待恢复"
+      ]
     }
   ]
 }

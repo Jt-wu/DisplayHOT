@@ -168,7 +168,9 @@ export function fromHtml(html: string, base: string, source: SourceRow): Candida
     const linkEl = c.linkSelector ? (el.is(c.linkSelector) ? el : el.find(c.linkSelector).first()) : el.is("a") ? el : el.find("a[href]").first();
     const url = absolute(linkEl.attr("href"), base);
     if (!url || seen.has(url) || !allowed(url, source)) continue;
-    if (!sectionsArePosts && listingItself(url, listing)) continue;
+    // An explicit query-bearing allow rule identifies detail pages such as LG's contentId links.
+    const queryPost = (c.allowUrlPrefixes ?? []).some((p: string) => p.includes("?") && overHttps(url).startsWith(overHttps(p)));
+    if (!sectionsArePosts && listingItself(url, listing) && !queryPost) continue;
     const titleEl = c.titleSelector ? (el.is(c.titleSelector) ? el : el.find(c.titleSelector).first()) : linkEl;
     const title = collapseWhitespace(titleEl.text() || linkEl.attr("title") || "");
     if (!title) continue;
